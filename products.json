@@ -1,20 +1,16 @@
 [
     {
         "id": 1,
-        "name": "لپ‌تاپ ایسوس",
-        "price": "25,000,000",
-        "image": "https://via.placeholder.com/250"
+        "name": "پیتزا مرغ",
+        "price": 25000,
+        "description": "پیتزا مرغ خوشمزه با پنیر و سس ویژه.",
+        "image": "pizza-chicken.jpg"
     },
     {
         "id": 2,
-        "name": "هدفون بلوتوثی",
-        "price": "3,500,000",
-        "image": "https://via.placeholder.com/250"
-    },
-    {
-        "id": 3,
-        "name": "ساعت هوشمند",
-        "price": "2,000,000",
-        "image": "https://via.placeholder.com/250"
+        "name": "کباب کوبیده",
+        "price": 15000,
+        "description": "کباب کوبیده تازه و لذیذ.",
+        "image": "kebab.jpg"
     }
 ]
