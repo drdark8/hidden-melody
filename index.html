@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محصولات فروشگاه - غذاخوری علی فاخری</title>
+    <title>غذاخوری علی فاخری</title>
     <style>
         * {
             margin: 0;
@@ -13,110 +13,159 @@
 
         body {
             font-family: 'Tahoma', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f4f1e1;
+            color: #3c2a21;
+        }
+
+        header {
+            background-color: #3e2a47;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
         }
 
         .products {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 30px;
+            justify-content: space-between;
         }
 
         .product {
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px;
-            width: 300px;
+            width: 30%;
             text-align: center;
             overflow: hidden;
         }
 
         .product img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
+            border-bottom: 2px solid #f4f1e1;
         }
 
         .product-info {
-            padding: 15px;
+            padding: 20px;
+            background-color: #fff8e1;
         }
 
         .product-info h3 {
             font-size: 24px;
+            color: #5f4b8b;
             margin-bottom: 10px;
-            color: #4CAF50;
         }
 
         .product-info p {
             font-size: 16px;
-            margin-bottom: 10px;
-            color: #555;
+            color: #6d4c41;
         }
 
         .product-info span {
             font-size: 18px;
+            color: #3e2a47;
             font-weight: bold;
-            color: #333;
         }
 
-        .btn {
+        .product-info a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            margin-top: 15px;
+            background-color: #5f4b8b;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
         }
 
-        .btn:hover {
-            background-color: #45a049;
+        .product-info a:hover {
+            background-color: #7e57c2;
         }
 
         footer {
-            background-color: #333;
+            background-color: #3e2a47;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 50px;
+            font-size: 16px;
         }
 
         footer p {
-            font-size: 16px;
+            margin-top: 10px;
         }
+
+        .owner-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .owner-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .owner-section h3 {
+            font-size: 24px;
+            color: #3e2a47;
+        }
+
+        .owner-section p {
+            font-size: 18px;
+            color: #6d4c41;
+        }
+
+        .map-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>فروشگاه علی فاخری</h1>
-    <p>محصولات ویژه و باکیفیت در غذاخوری علی فاخری</p>
+    <h1>غذاخوری علی فاخری</h1>
+    <p>تجربه‌ای متفاوت از غذاهای اصیل ایرانی</p>
 </header>
+
+<div class="contact-info">
+    <p>تماس با ما: <a href="tel:+989147481911">+98 914 748 1911</a></p>
+    <p>آدرس: <a href="https://maps.app.goo.gl/V5pN7ivWLJKFBJVW6" target="_blank">غذاخوری علی فاخری، تهران</a></p>
+</div>
 
 <div class="container">
     <div class="products">
@@ -128,7 +177,7 @@
                 <p>نوشابه کوچک با طعم دلپذیر و حجم 330 میلی‌لیتر، مناسب برای مصرف فردی.</p>
                 <span>قیمت: 20,000 تومان</span>
                 <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
+                <a href="#">جزئیات بیشتر</a>
             </div>
         </div>
 
@@ -140,7 +189,7 @@
                 <p>نوشابه گازدار با حجم 1.5 لیتر برای مصرف خانواده‌ها و مهمانی‌ها.</p>
                 <span>قیمت: 45,000 تومان</span>
                 <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
+                <a href="#">جزئیات بیشتر</a>
             </div>
         </div>
 
@@ -152,7 +201,7 @@
                 <p>لیموناد گازدار با طعم لیمو و حجم 280 میلی‌لیتر، شیشه‌ای و تازه.</p>
                 <span>قیمت: 15,000 تومان</span>
                 <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
+                <a href="#">جزئیات بیشتر</a>
             </div>
         </div>
 
@@ -164,53 +213,26 @@
                 <p>دوغ آبعلی با طعم اصیل ایرانی و حجم 1.5 لیتر، مناسب برای مصرف همراه غذا.</p>
                 <span>قیمت: 25,000 تومان</span>
                 <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
-            </div>
-        </div>
-
-        <!-- محصول کباب کوبیده -->
-        <div class="product">
-            <img src="https://www.example.com/kabab-koobideh.jpg" alt="کباب کوبیده">
-            <div class="product-info">
-                <h3>کباب کوبیده</h3>
-                <p>کباب کوبیده خوشمزه و تازه، مناسب برای مهمانی‌ها و دورهمی‌ها.</p>
-                <span>قیمت: 120,000 تومان</span>
-                <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
-            </div>
-        </div>
-
-        <!-- محصول کباب چنجه -->
-        <div class="product">
-            <img src="https://www.example.com/kabab-chenjeh.jpg" alt="کباب چنجه">
-            <div class="product-info">
-                <h3>کباب چنجه</h3>
-                <p>کباب چنجه با گوشت تازه و طعمی بی‌نظیر، مناسب برای سرو در مهمانی‌ها.</p>
-                <span>قیمت: 150,000 تومان</span>
-                <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
-            </div>
-        </div>
-
-        <!-- محصول جوجه کباب -->
-        <div class="product">
-            <img src="https://www.example.com/joojeh-kabab.jpg" alt="جوجه کباب">
-            <div class="product-info">
-                <h3>جوجه کباب</h3>
-                <p>جوجه کباب خوشمزه با طعم بی‌نظیر و گوشت تازه، مناسب برای مهمانی‌ها و دورهمی‌ها.</p>
-                <span>قیمت: 130,000 تومان</span>
-                <br>
-                <a href="#" class="btn">جزئیات بیشتر</a>
+                <a href="#">جزئیات بیشتر</a>
             </div>
         </div>
     </div>
 </div>
 
+<div class="owner-section">
+    <img src="https://lh5.googleusercontent.com/p/AF1QipO_60epD2nvXlEFs7O4TDWqugxiCAGEkE2IQRoJ=w408-h544-k-no" alt="علی فاخری">
+    <h3>مدیریت: علی فاخری</h3>
+    <p>برای سفارشات و اطلاعات بیشتر با شماره تماس <strong>+989147481911</strong> تماس بگیرید.</p>
+</div>
+
+<div class="map-section">
+    <iframe src="https://maps.google.com/maps?q=%D8%BA%D8%B0%D8%A7%D8%AE%D9%88%D8%B1%DB%8C%20%D8%B9%D9%84%DB%8C%20%D9%81%D8%A7%D8%AE%D8%B1%DB%8C%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%2C%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%20%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA%DB%8C&output=embed" loading="lazy"></iframe>
+</div>
+
 <footer>
-    <p>آدرس: غذاخوری علی فاخری، تهران، خیابان شریعتی، شماره ۵۰</p>
-    <p>شماره تماس: 0912-345-6789</p>
-    <p>تمامی حقوق محفوظ است © 2025</p>
+    <p>&copy; 2025 غذافروشی علی فاخری. تمامی حقوق محفوظ است.</p>
 </footer>
 
 </body>
 </html>
+
