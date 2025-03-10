@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه هوشمند</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>غذاخوری علی فاخری</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>فروشگاه هوشمند</h1>
-        <button id="theme-toggle">🌓 حالت تیره</button>
-        <div class="cart">
-            <button id="cart-btn">🛒 سبد خرید (<span id="cart-count">0</span>)</button>
+        <div class="container">
+            <h1>غذاخوری علی فاخری</h1>
+            <p class="address">
+                <strong>آدرس:</strong> <a href="https://maps.app.goo.gl/V5pN7ivWLJKFBJVW6" target="_blank">کلیک کنید برای مشاهده آدرس در نقشه</a>
+            </p>
+            <p class="contact">
+                <strong>شماره تماس:</strong> <a href="tel:+989147481911">+98 914 748 1911</a>
+            </p>
         </div>
     </header>
 
-    <main>
-        <section id="products"></section>
-    </main>
-
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>سبد خرید شما</h2>
-            <ul id="cart-items"></ul>
-            <button id="checkout">پرداخت</button>
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <h2>مجوز وزارت بهداشت</h2>
+                <p>مجوز رسمی از وزارت بهداشت جمهوری اسلامی ایران</p>
+            </div>
+            <div class="feature-item">
+                <h2>خدمات پیک</h2>
+                <p>خدمات پیک به کوزه کنان تا ساعت 1 بامداد</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="ratings">
+        <div class="container">
+            <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <p>مشتریان ما راضی هستند!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 علی فاخری - تمامی حقوق محفوظ است</p>
+        </div>
+    </footer>
 </body>
 </html>
