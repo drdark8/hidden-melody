@@ -4,59 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>غذاخوری علی فاخری</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+
+    <!-- هدر -->
+    <header class="hero">
+        <div class="hero-content">
             <h1>غذاخوری علی فاخری</h1>
-            <p>سفارش آنلاین با تحویل سریع</p>
+            <p>غذای خوشمزه با تحویل سریع، سفارش آنلاین</p>
+            <button class="cta-btn">سفارش آنلاین</button>
         </div>
     </header>
 
+    <!-- منو -->
     <section class="menu">
         <div class="container">
             <h2>منو غذا</h2>
             <div class="food-list">
                 <!-- غذای 1 -->
                 <div class="food-item">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipO_60epD2nvXlEFs7O4TDWqugxiCAGEkE2IQRoJ=w408-h544-k-no" alt="کباب کوبیده">
+                    <img src="https://www.example.com/kebab.jpg" alt="کباب">
                     <h3>کباب کوبیده</h3>
-                    <p class="price">قیمت: ۱۵,۰۰۰ تومان</p>
+                    <p class="price">۱۵,۰۰۰ تومان</p>
                     <button class="order-btn" onclick="order('کباب کوبیده')">ثبت سفارش</button>
                 </div>
-
                 <!-- غذای 2 -->
                 <div class="food-item">
-                    <img src="https://www.example.com/image2.jpg" alt="پیتزا">
+                    <img src="https://www.example.com/pizza.jpg" alt="پیتزا">
                     <h3>پیتزا مرغ</h3>
-                    <p class="price">قیمت: ۲۵,۰۰۰ تومان</p>
+                    <p class="price">۲۵,۰۰۰ تومان</p>
                     <button class="order-btn" onclick="order('پیتزا مرغ')">ثبت سفارش</button>
                 </div>
-
                 <!-- غذای 3 -->
                 <div class="food-item">
-                    <img src="https://www.example.com/image3.jpg" alt="سالاد">
+                    <img src="https://www.example.com/salad.jpg" alt="سالاد">
                     <h3>سالاد شیرازی</h3>
-                    <p class="price">قیمت: ۸,۰۰۰ تومان</p>
+                    <p class="price">۸,۰۰۰ تومان</p>
                     <button class="order-btn" onclick="order('سالاد شیرازی')">ثبت سفارش</button>
                 </div>
-
                 <!-- غذای 4 -->
                 <div class="food-item">
-                    <img src="https://www.example.com/image4.jpg" alt="نوشیدنی">
+                    <img src="https://www.example.com/drink.jpg" alt="نوشیدنی">
                     <h3>نوشیدنی لیمویی</h3>
-                    <p class="price">قیمت: ۵,۰۰۰ تومان</p>
+                    <p class="price">۵,۰۰۰ تومان</p>
                     <button class="order-btn" onclick="order('نوشیدنی لیمویی')">ثبت سفارش</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- فوتر -->
     <footer>
         <div class="container">
             <p>تماس با ما: +98 914 748 1911</p>
+            <p>آدرس: <a href="https://maps.app.goo.gl/V5pN7ivWLJKFBJVW6" target="_blank">کلیک کنید برای مشاهده آدرس</a></p>
         </div>
     </footer>
 
