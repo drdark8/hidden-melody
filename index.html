@@ -3,125 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منوی کباب‌های ایرانی - غذای علی فاخری</title>
+    <title>رستوران علی فاخری</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Tahoma', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
         header {
-            background-color: #8B0000;
+            background-color: #333;
             color: white;
-            padding: 20px;
             text-align: center;
-            font-size: 28px;
-            border-bottom: 5px solid #660000;
+            padding: 10px 0;
         }
-
-        .container {
-            width: 80%;
-            margin: 30px auto;
+        .menu-item {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .product {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: space-between;
+            background-color: white;
             margin: 20px;
-            width: 30%;
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .product:hover {
-            transform: scale(1.05);
-        }
-
-        .product img {
-            width: 100%;
-            height: 250px;
+        .menu-item img {
+            width: 200px;
+            height: 150px;
             object-fit: cover;
-            border-bottom: 3px solid #8B0000;
+            border-radius: 8px;
         }
-
-        .product-info {
-            padding: 20px;
+        .menu-item-info {
+            flex: 1;
+            padding: 0 20px;
         }
-
-        .product-info h3 {
-            font-size: 22px;
-            color: #8B0000;
-            margin-bottom: 10px;
-        }
-
-        .product-info p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .product-info span {
-            font-size: 18px;
+        .menu-item-info h3 {
             color: #333;
-            font-weight: bold;
         }
-
+        .menu-item-info p {
+            color: #777;
+        }
         footer {
-            background-color: #8B0000;
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 16px;
-            margin-top: 30px;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>منوی انواع کباب‌های ایرانی</h1>
+    <h1>رستوران علی فاخری</h1>
+    <p>مکان: کوزه‌کنان، استان آذربایجان شرقی، ایران</p>
+    <p>ساعت کار: 10 صبح تا 11 شب</p>
+    <p>تماس: 09147481911</p>
 </header>
 
-<div class="container">
-    <div class="product">
-        <img src="https://tse2.mm.bing.net/th?id=OIP.ZWo-He0JZJbyC13n358nnAHaHa&pid=Api&P=0&h=220" alt="کباب کوبیده">
-        <div class="product-info">
-            <h3>کباب کوبیده</h3>
-            <p>کباب سنتی ایرانی با گوشت چرخ‌کرده، زعفران و ادویه‌های مخصوص.</p>
-            <span>قیمت: 120,000 تومان</span>
-        </div>
-    </div>
-    <div class="product">
-        <img src="https://images.search.yahoo.com/images/view;_ylt=AwrijhDBGdFnI6wpRX.JzbkF;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzY2OTAzYTc3NGMyMzZkYTA3NTUwYTUyMzkxNzAwNGZiBGdwb3MDNDYEaXQDYmluZw--?back=https%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3Fp%3D%25D8%25AC%25D9%2588%25D8%25AC%25D9%2587%2B%25DA%25A9%25D8%25A8%25D8%25A7%25D8%25A8%26type%3DE210US885G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D46&w=640&h=427&imgurl=cdn.isna.ir%2Fd%2F2021%2F12%2F18%2F3%2F62123512.jpg%3Fts%3D1639821829029&rurl=https%3A%2F%2Fwww.isna.ir%2Fnews%2F1400092721202%2F%25D8%25B7%25D8%25B1%25D8%25B2-%25D8%25AA%25D9%2587%25DB%258C%25D9%2587-%25D8%25AC%25D9%2588%25D8%25AC%25D9%2587-%25DA%25A9%25D8%25A8%25D8%25A7%25D8%25A8-%25D9%2581%25D9%2588%25D9%2582-%25D8%25A7%25D9%2584%25D8%25B9%25D8%25A7%25D8%25AF%25D9%2587-%25D8%25A8%25D9%2587-%25D9%2587%25D9%2585%25D8%25B1%25D8%25A7%25D9%2587-%25D9%2585%25D9%2588%25D8%25A7%25D8%25AF-%25D9%2584%25D8%25A7%25D8%25B2%25D9%2585&size=77KB&p=%D8%AC%D9%88%D8%AC%D9%87+%DA%A9%D8%A8%D8%A7%D8%A8&oid=66903a774c236da07550a523917004fb&fr2=piv-web&fr=mcafee&tt=%D8%B7%D8%B1%D8%B2+%D8%AA%D9%87%DB%8C%D9%87+%D8%AC%D9%88%D8%AC%D9%87+%DA%A9%D8%A8%D8%A7%D8%A8+%D9%81%D9%88%D9%82%E2%80%8C%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%87+%D8%A8%D9%87+%D9%87%D9%85%D8%B1%D8%A7%D9%87+%D9%85%D9%88%D8%A7%D8%AF+%D9%84%D8%A7%D8%B2%D9%85+-+%D8%A7%DB%8C%D8%B3%D9%86%D8%A7&b=0&ni=21&no=46&ts=&tab=organic&sigr=gAdoBAOPbHXr&sigb=cBxe.RxI02BH&sigi=kz1MhxywfJIP&sigt=QoqBMH0gB1BP&.crumb=npWl/eR5sKf&fr=mcafee&fr2=piv-web&type=E210US885G0" alt="جوجه کباب">
-        <div class="product-info">
-            <h3>جوجه کباب</h3>
-            <p>مرغ گریل‌شده با زعفران و کره، طعمی لذیذ و بی‌نظیر.</p>
-            <span>قیمت: 150,000 تومان</span>
-        </div>
-    </div>
-    <div class="product">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Barg_kebab.jpg" alt="کباب برگ">
-        <div class="product-info">
-            <h3>کباب برگ</h3>
-            <p>استیک گوسفندی نرم و آبدار، طعمی خاص و اصیل ایرانی.</p>
-            <span>قیمت: 180,000 تومان</span>
-        </div>
+<div class="menu-item">
+    <img src="https://lh5.googleusercontent.com/p/AF1QipO_60epD2nvXlEFs7O4TDWqugxiCAGEkE2IQRoJ=w408-h544-k-no" alt="غذا 1">
+    <div class="menu-item-info">
+        <h3>غذا 1</h3>
+        <p>توضیحات درباره غذا 1...</p>
+        <button>مشاهده جزئیات</button>
     </div>
 </div>
 
+<div class="menu-item">
+    <img src="path_to_image.jpg" alt="غذا 2">
+    <div class="menu-item-info">
+        <h3>غذا 2</h3>
+        <p>توضیحات درباره غذا 2...</p>
+        <button>مشاهده جزئیات</button>
+    </div>
+</div>
+
+<!-- شما می‌توانید غذاهای بیشتری به همین شکل اضافه کنید -->
+
 <footer>
-    <p>&copy; 2025 غذافروشی علی فاخری. تمامی حقوق محفوظ است.</p>
+    <p>© 2025 رستوران علی فاخری. تمامی حقوق محفوظ است.</p>
 </footer>
 
 </body>
