@@ -1,4 +1,6 @@
-// این تابع به کاربران اطلاع می‌دهد که سفارش ثبت شده است.
-function order(item) {
-    alert("سفارش شما برای " + item + " ثبت شد!");
+let cart = [];
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    alert(`${productName} به سبد خرید اضافه شد!`);
 }
