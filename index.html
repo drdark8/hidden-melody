@@ -3,116 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رستوران علی فاخری</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .restaurant-owner {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .restaurant-owner img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 20px;
-        }
-        .menu-item {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .menu-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .menu-item h3 {
-            color: #333;
-            margin-top: 10px;
-        }
-        .menu-item p {
-            color: #777;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>فروشگاه Danietechone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>رستوران علی فاخری</h1>
-    <p>مکان: کوزه‌کنان، استان آذربایجان شرقی، ایران</p>
-    <p>ساعت کار: 10 صبح تا 11 شب</p>
-    <p>تماس: 09147481911</p>
-</header>
+    <header>
+        <h1>فروشگاه Danietechone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">محصولات</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="restaurant-owner">
-    <h2>مدیریت: علی فاخری</h2>
-    <img src="https://lh5.googleusercontent.com/p/AF1QipO_60epD2nvXlEFs7O4TDWqugxiCAGEkE2IQRoJ=w408-h544-k-no" alt="صاحب رستوران">
-</div>
+    <section class="products">
+        <div class="product">
+            <img src="assets/product1.jpg" alt="محصول ۱">
+            <h2>نام محصول ۱</h2>
+            <p>قیمت: ۲۰۰,۰۰۰ تومان</p>
+            <button onclick="addToCart('نام محصول ۱', 200000)">افزودن به سبد خرید</button>
+        </div>
 
-<div class="menu">
-    <div class="menu-item">
-        <img src="https://example.com/food1.jpg" alt="غذا 1">
-        <h3>غذا های شهناز فاخری</h3>
-        <p>توضیحات مختصر درباره غذا 1...</p>
-    </div>
-    <div class="menu-item">
-        <img src="https://example.com/food2.jpg" alt="غذا 2">
-        <h3>غذا 2</h3>
-        <p>توضیحات مختصر درباره غذا 2...</p>
-    </div>
-    <div class="menu-item">
-        <img src="https://example.com/food3.jpg" alt="غذا 3">
-        <h3>غذا 3</h3>
-        <p>توضیحات مختصر درباره غذا 3...</p>
-    </div>
-    <div class="menu-item">
-        <img src="https://example.com/food4.jpg" alt="غذا 4">
-        <h3>غذا 4</h3>
-        <p>توضیحات مختصر درباره غذا 4...</p>
-    </div>
-    <div class="menu-item">
-        <img src="https://example.com/food5.jpg" alt="غذا 5">
-        <h3>غذا 5</h3>
-        <p>توضیحات مختصر درباره غذا 5...</p>
-    </div>
-    <div class="menu-item">
-        <img src="https://example.com/food6.jpg" alt="غذا 6">
-        <h3>غدا های شهناز فاخری</h3>
-        <p>توضیحات مختصر درباره غذا 6...</p>
-    </div>
-    <!-- می‌توانید غذاهای بیشتری اضافه کنید -->
-</div>
+        <div class="product">
+            <img src="assets/product2.jpg" alt="محصول ۲">
+            <h2>نام محصول ۲</h2>
+            <p>قیمت: ۳۵۰,۰۰۰ تومان</p>
+            <button onclick="addToCart('نام محصول ۲', 350000)">افزودن به سبد خرید</button>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2025 رستوران علی فاخری. تمامی حقوق محفوظ است.</p>
-</footer>
+    <footer>
+        <p>تمامی حقوق محفوظ است &copy; 2025</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
