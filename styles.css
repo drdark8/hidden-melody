@@ -1,6 +1,13 @@
-background: rgba(255, 255, 255, 0.25); /* پس‌زمینه با شفافیت (شفاف و سفید) */
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* سایه با افکت سه‌بعدی برای عمق بیشتر */
-backdrop-filter: blur(4px); /* افکت بلور برای پس‌زمینه (به حالت شیشه‌ای) */
--webkit-backdrop-filter: blur(4px); /* نسخه Safari برای پشتیبانی از بلور */
-border-radius: 10px; /* شعاع مرزی برای گرد کردن گوشه‌ها */
-border: 1px solid rgba(255, 255, 255, 0.18); /* حاشیه نازک و شفاف */
+.glass-container {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  margin: 50px auto;
+}
