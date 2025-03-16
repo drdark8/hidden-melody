@@ -1,13 +1,14 @@
+/* این استایل‌ها برای طراحی شیشه‌ای هستند */
 .glass-container {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 20px;
-  text-align: center;
-  color: white;
-  max-width: 400px;
-  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.25); /* پس‌زمینه شفاف */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* سایه ۳ بعدی */
+  backdrop-filter: blur(4px); /* افکت بلور */
+  -webkit-backdrop-filter: blur(4px); /* برای Safari */
+  border-radius: 10px; /* گوشه‌های گرد */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* حاشیه شفاف */
+  padding: 20px; /* فاصله داخلی */
+  text-align: center; /* مرکز چین کردن متن */
+  color: white; /* رنگ متن */
+  max-width: 400px; /* حداکثر عرض */
+  margin: 50px auto; /* تنظیم موقعیت و فاصله از بالا */
 }
