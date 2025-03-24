@@ -1,138 +1,131 @@
-const CACHE_NAME = "offline-statics"
-  , ASSET_URL = "https://s100.divarcdn.com/statics/the-wall/public/offline-statics/"
-  , OFFLINE = `${ASSET_URL}index.html`
-  , URLS = [OFFLINE, `${ASSET_URL}styles.css`, `${ASSET_URL}offline.svg`, `${ASSET_URL}logo.svg`, `${ASSET_URL}IRANSansWeb.eot`, `${ASSET_URL}IRANSansWeb.woff2`, `${ASSET_URL}IRANSansWeb.woff`, `${ASSET_URL}IRANSansWeb.ttf`, "https://s100.divarcdn.com/static/thewall-assets/favicon-32x32.png"]
-  , ACTION_TYPES = {
-  OPEN_CHAT_CONVERSATION: "chat",
-  OPEN_CHAT_POSTCHI: "postchi",
-  OPEN_POST_MANAGE: "manage"
-}
-  , NOTIFICATION_BASE_CONFIG = {
-  lang: "FA",
-  dir: "rtl",
-  renotify: !0,
-  badge: "https://s100.divarcdn.com/static/thewall-assets/notif-badge.png",
-  icon: "https://s100.divarcdn.com/static/thewall-assets/android-chrome-192x192.png"
-}
-  , OFFLINE_VERSION = 5;
-function installHandler(t) {
-  t.waitUntil(caches.open(CACHE_NAME).then((t=>t.addAll(URLS.map((t=>new Request(t,{
-    cache: "reload"
-  })))))).catch((t=>console.warn(t)))),
-  self.skipWaiting()
-}
-function activateHandler(t) {
-  self.clients.claim(),
-  t.waitUntil(self.registration.navigationPreload ? self.registration.navigationPreload.enable() : Promise.resolve())
-}
-function messageHandler(t) {
-  if (t.data && "SKIP_WAITING" === t.data.type)
-    updateActivationHandler()
-}
-function updateActivationHandler() {
-  self.addEventListener("activate", (()=>{
-    self.clients.matchAll({
-      type: "window"
-    }).then((t=>{
-      t.forEach((t=>{
-        t.postMessage({
-          type: "RELOAD"
-        })
-      }
-      ))
+// Sample product data
+const products = [
+    {
+        id: 1,
+        name: "گوشی هوشمند سامسونگ گلکسی S24",
+        price: "۴۹,۹۹۹,۰۰۰",
+        image: "images/samsung-s24.jpg",
+        category: "موبایل"
+    },
+    {
+        id: 2,
+        name: "لپ‌تاپ اپل مک‌بوک پرو M3",
+        price: "۱۲۹,۹۹۹,۰۰۰",
+        image: "images/macbook-pro.jpg",
+        category: "لپ‌تاپ"
+    },
+    {
+        id: 3,
+        name: "هدفون بی‌سیم اپل ایرپادز پرو",
+        price: "۱۲,۹۹۹,۰۰۰",
+        image: "images/airpods-pro.jpg",
+        category: "لوازم جانبی"
+    },
+    {
+        id: 4,
+        name: "گوشی هوشمند اپل آیفون ۱۵ پرو",
+        price: "۸۹,۹۹۹,۰۰۰",
+        image: "images/iphone-15.jpg",
+        category: "موبایل"
+    },
+    {
+        id: 5,
+        name: "لپ‌تاپ لنوو لژیون",
+        price: "۷۹,۹۹۹,۰۰۰",
+        image: "images/lenovo-legion.jpg",
+        category: "لپ‌تاپ"
+    },
+    {
+        id: 6,
+        name: "کیبورد مکانیکی رازر",
+        price: "۲,۹۹۹,۰۰۰",
+        image: "images/razer-keyboard.jpg",
+        category: "لوازم جانبی"
     }
-    ))
-  }
-  )),
-  self.skipWaiting()
+];
+
+// Cart functionality
+let cart = [];
+
+// Load featured products
+function loadFeaturedProducts() {
+    const productGrid = document.getElementById('featured-products');
+    productGrid.innerHTML = '';
+
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-price">${product.price} تومان</p>
+                <button onclick="addToCart(${product.id})" class="cta-button">افزودن به سبد خرید</button>
+            </div>
+        `;
+        productGrid.appendChild(productCard);
+    });
 }
-function fetchHandler(t) {
-  "navigate" === t.request.mode && t.respondWith(Promise.resolve(t.preloadResponse).then((e=>e || fetch(t.request))).catch((()=>caches.open(CACHE_NAME).then((t=>t.match(OFFLINE)))))),
-  /https:\/\/s100.divarcdn.com\/statics\/the-wall\/public\/offline-statics\/.*|https:\/\/s100.divarcdn.com\/static\/thewall-assets\/favicon-32x32.png/.test(t.request.url) && t.respondWith(caches.open(CACHE_NAME).then((e=>e.match(t.request.url))).catch((e=>e || fetch(t.request))))
-}
-function pushHandler(t) {
-  try {
-    if (!t || !t.data)
-      return;
-    const e = t.data.json()
-      , {action: a, param: n, callback_url: s, title: i, body: c, source: r, push_id: o} = e;
-    if ("divar" !== r)
-      return;
-    const l = JSON.parse(n.replaceAll("'", '"'));
-    let d;
-    switch (a) {
-    case ACTION_TYPES.OPEN_CHAT_CONVERSATION:
-      d = `chat-${l.id}`;
-      break;
-    case ACTION_TYPES.OPEN_CHAT_POSTCHI:
-      d = "postchi";
-      break;
-    case ACTION_TYPES.OPEN_POST_MANAGE:
-      d = "manage"
+
+// Add to cart functionality
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        cart.push(product);
+        updateCartCount();
+        showNotification('محصول به سبد خرید اضافه شد');
     }
-    const h = Object.assign({
-      body: c,
-      tag: d,
-      data: {
-        action: a,
-        params: l
-      }
-    }, NOTIFICATION_BASE_CONFIG);
-    t.waitUntil(self.registration.showNotification(i, h).then((()=>fetch(s, {
-      method: "POST"
-    }).catch((()=>queueDeliveredPush(o))))))
-  } catch (e) {}
 }
-function notificationClickHandler(t) {
-  try {
-    const {action: e, params: a} = t?.notification?.data || {};
-    switch (e) {
-    case ACTION_TYPES.OPEN_CHAT_CONVERSATION:
-      a?.id && t.waitUntil(clients.openWindow(`https://divar.ir/chat/${a.id}`));
-      break;
-    case ACTION_TYPES.OPEN_CHAT_POSTCHI:
-      t.waitUntil(clients.openWindow("https://divar.ir/chat/postchi"));
-      break;
-    case ACTION_TYPES.OPEN_POST_MANAGE:
-      a?.mng_token && t.waitUntil(clients.openWindow(`https://divar.ir/manage/${a.mng_token}`))
+
+// Update cart count
+function updateCartCount() {
+    const cartCount = document.querySelector('.nav-links a:last-child');
+    if (cartCount) {
+        cartCount.innerHTML = `سبد خرید <i class="fas fa-shopping-cart"></i> (${cart.length})`;
     }
-    t.notification.close()
-  } catch (e) {}
 }
-function queueDeliveredPush(t) {
-  const e = "DeliveredPushIds"
-    , a = getPushStore();
-  return getIdbItem(e, a).then((e=>(Array.isArray(e) || (e = []),
-  e.push(t),
-  e))).then((t=>setIdbItem(e, t, a))).catch((()=>{}
-  ))
+
+// Show notification
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
 }
-function getPushStore() {
-  return createIdbStore("push-db", "push-store")
-}
-function getIdbItem(t, e) {
-  return e("readonly", (e=>promisifyRequest(e.get(t))))
-}
-function setIdbItem(t, e, a) {
-  return a("readwrite", (a=>(a.put(e, t),
-  promisifyRequest(a.transaction))))
-}
-function promisifyRequest(t) {
-  return new Promise(((e,a)=>{
-    t.oncomplete = t.onsuccess = ()=>e(t.result),
-    t.onabort = t.onerror = ()=>a(t.error)
-  }
-  ))
-}
-function createIdbStore(t, e) {
-  const a = indexedDB.open(t);
-  a.onupgradeneeded = ()=>a.result.createObjectStore(e);
-  const n = promisifyRequest(a);
-  return (t,a)=>n.then((n=>a(n.transaction(e, t).objectStore(e))))
-}
-self.addEventListener("install", installHandler),
-self.addEventListener("activate", activateHandler),
-self.addEventListener("message", messageHandler),
-self.addEventListener("fetch", fetchHandler),
-self.addEventListener("push", pushHandler),
-self.addEventListener("notificationclick", noti
+
+// Search functionality
+const searchInput = document.querySelector('.search-bar input');
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.category.toLowerCase().includes(searchTerm)
+    );
+    
+    const productGrid = document.getElementById('featured-products');
+    productGrid.innerHTML = '';
+
+    filteredProducts.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-price">${product.price} تومان</p>
+                <button onclick="addToCart(${product.id})" class="cta-button">افزودن به سبد خرید</button>
+            </div>
+        `;
+        productGrid.appendChild(productCard);
+    });
+});
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+    loadFeaturedProducts();
+    updateCartCount();
+}); 
