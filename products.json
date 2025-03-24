@@ -1,16 +1,92 @@
-[
-    {
-        "id": 1,
-        "name": "پیتزا مرغ",
-        "price": 25000,
-        "description": "پیتزا مرغ خوشمزه با پنیر و سس ویژه.",
-        "image": "pizza-chicken.jpg"
-    },
-    {
-        "id": 2,
-        "name": "کباب کوبیده",
-        "price": 15000,
-        "description": "کباب کوبیده تازه و لذیذ.",
-        "image": "kebab.jpg"
-    }
-]
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "گوشی هوشمند سامسونگ گلکسی S24",
+            "price": "۴۹,۹۹۹,۰۰۰",
+            "image": "images/samsung-s24.jpg",
+            "category": "موبایل",
+            "description": "گوشی هوشمند سامسونگ گلکسی S24 با پردازنده قدرتمند و دوربین پیشرفته",
+            "specs": {
+                "screen": "6.7 اینچ",
+                "processor": "Snapdragon 8 Gen 3",
+                "ram": "8GB",
+                "storage": "256GB",
+                "battery": "4500mAh"
+            }
+        },
+        {
+            "id": 2,
+            "name": "لپ‌تاپ اپل مک‌بوک پرو M3",
+            "price": "۱۲۹,۹۹۹,۰۰۰",
+            "image": "images/macbook-pro.jpg",
+            "category": "لپ‌تاپ",
+            "description": "لپ‌تاپ اپل مک‌بوک پرو با پردازنده M3 و نمایشگر Retina",
+            "specs": {
+                "screen": "14 اینچ",
+                "processor": "Apple M3",
+                "ram": "16GB",
+                "storage": "512GB SSD",
+                "battery": "Up to 22 hours"
+            }
+        },
+        {
+            "id": 3,
+            "name": "هدفون بی‌سیم اپل ایرپادز پرو",
+            "price": "۱۲,۹۹۹,۰۰۰",
+            "image": "images/airpods-pro.jpg",
+            "category": "لوازم جانبی",
+            "description": "هدفون بی‌سیم اپل ایرپادز پرو با قابلیت حذف نویز فعال",
+            "specs": {
+                "battery": "Up to 6 hours",
+                "noiseCancellation": "Active Noise Cancellation",
+                "waterResistant": "IPX4",
+                "connectivity": "Bluetooth 5.0"
+            }
+        },
+        {
+            "id": 4,
+            "name": "گوشی هوشمند اپل آیفون ۱۵ پرو",
+            "price": "۸۹,۹۹۹,۰۰۰",
+            "image": "images/iphone-15.jpg",
+            "category": "موبایل",
+            "description": "گوشی هوشمند اپل آیفون ۱۵ پرو با دوربین پیشرفته و پردازنده A17 Pro",
+            "specs": {
+                "screen": "6.7 اینچ",
+                "processor": "A17 Pro",
+                "ram": "8GB",
+                "storage": "256GB",
+                "battery": "Up to 23 hours"
+            }
+        },
+        {
+            "id": 5,
+            "name": "لپ‌تاپ لنوو لژیون",
+            "price": "۷۹,۹۹۹,۰۰۰",
+            "image": "images/lenovo-legion.jpg",
+            "category": "لپ‌تاپ",
+            "description": "لپ‌تاپ گیمینگ لنوو لژیون با کارت گرافیک قدرتمند",
+            "specs": {
+                "screen": "15.6 اینچ",
+                "processor": "Intel Core i7",
+                "ram": "16GB",
+                "storage": "1TB SSD",
+                "graphics": "NVIDIA RTX 4060"
+            }
+        },
+        {
+            "id": 6,
+            "name": "کیبورد مکانیکی رازر",
+            "price": "۲,۹۹۹,۰۰۰",
+            "image": "images/razer-keyboard.jpg",
+            "category": "لوازم جانبی",
+            "description": "کیبورد مکانیکی گیمینگ رازر با سوئیچ‌های مکانیکی و RGB",
+            "specs": {
+                "switches": "Razer Green",
+                "backlight": "RGB",
+                "connection": "USB-C",
+                "material": "Aluminum frame"
+            }
+        }
+    ]
+} 
